@@ -1,0 +1,57 @@
+digraph result {
+	"32.o" -> output
+	"33.o" -> output
+	"35.o" -> "46.i"
+	"35.o" -> "47.i"
+	"35.o" -> output
+	"36.o" -> output
+	"39.o" -> "45.i"
+	"39.o" -> "46.i"
+	"39.o" -> "47.i"
+	"39.o" -> output
+	"40.o" -> "46.i"
+	"40.o" -> "47.i"
+	"40.o" -> output
+	"43.i" -> "43.conv" [label="[0]tensor(0.0070, device='cuda:0')"]
+	"43.conv" -> "43.ssm"
+	"43.i" -> "43.skip"
+	"43.o" -> "46.i"
+	"43.o" -> "47.i"
+	"43.o" -> output
+	"45.i" -> "45.conv" [label="[-1]tensor(0.0002, device='cuda:0')"]
+	"45.i" -> "45.conv" [label="[0]tensor(0.0009, device='cuda:0')"]
+	"45.conv" -> "45.ssm"
+	"45.i" -> "45.skip"
+	"45.o" -> "47.i"
+	"45.o" -> output
+	"46.i" -> "46.conv" [label="[-1]tensor(0.0001, device='cuda:0')"]
+	"46.i" -> "46.conv" [label="[0]tensor(0.0030, device='cuda:0')"]
+	"46.conv" -> "46.ssm"
+	"46.i" -> "46.skip"
+	"46.o" -> "47.i"
+	"46.o" -> output
+	"47.i" -> "47.conv" [label="[0]tensor(0.0322, device='cuda:0')"]
+	"47.conv" -> "47.ssm"
+	"47.i" -> "47.skip"
+	"47.o" -> output
+	"32.ssm" -> "32.o"
+	"32.skip" -> "32.o"
+	"33.ssm" -> "33.o"
+	"33.skip" -> "33.o"
+	"35.ssm" -> "35.o"
+	"35.skip" -> "35.o"
+	"36.ssm" -> "36.o"
+	"36.skip" -> "36.o"
+	"39.ssm" -> "39.o"
+	"39.skip" -> "39.o"
+	"40.ssm" -> "40.o"
+	"40.skip" -> "40.o"
+	"43.ssm" -> "43.o"
+	"43.skip" -> "43.o"
+	"45.ssm" -> "45.o"
+	"45.skip" -> "45.o"
+	"46.ssm" -> "46.o"
+	"46.skip" -> "46.o"
+	"47.ssm" -> "47.o"
+	"47.skip" -> "47.o"
+}
